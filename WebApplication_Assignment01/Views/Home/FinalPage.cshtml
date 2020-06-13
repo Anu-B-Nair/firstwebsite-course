@@ -1,0 +1,50 @@
+﻿@model WebApplication_Assignment01.Models.VisitorResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Availability</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+
+</head>
+
+<body class="text-center" style="background-color:lavender;">
+    <p>
+        <h1>Registration completed! Thank you @Model.Name for Joining with us.</h1>
+    </p>
+    <div class="panel-body">
+        <p>Please check the information below are correct.</p>
+        <table class="table table-sm table-striped table-bordered" style="background-color:thistle;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Designation</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.Address</td>
+                    <td>@Model.Designation</td>
+                    <td>@Model.Gender</td>
+                    <td>@Model.Age</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.Phone</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If you want to change the entered details click <a class="navbar-link" asp-action="Registration">here</a></p>
+    </div>
+
+
+</body>
+</html>
